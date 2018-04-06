@@ -1,0 +1,47 @@
+/////
+// Global
+////
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $black;
+  color: $white;
+}
+
+////
+// Utils
+////
+.container {
+  max-width: 1440px;
+}
+
+
+////
+// Hero
+////
+.hero {
+  background-image: url('../images/stars.png');
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__inner {
+  background-image: url('../images/poly-shape-pink.png');
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy {
+  width: 80%;
+  margin: auto;
+}
