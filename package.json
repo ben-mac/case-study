@@ -1,0 +1,27 @@
+{
+  "name": "case-study",
+  "version": "1.0.0",
+  "description": "simple gulp setup for case studies project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-mac/case-study.git"
+  },
+  "author": "Ben Mac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-mac/case-study/issues"
+  },
+  "homepage": "https://github.com/ben-mac/case-study#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.2.0",
+    "browsersync": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.0",
+    "gulp-sourcemaps": "^2.6.4"
+  }
+}
