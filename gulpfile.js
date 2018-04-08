@@ -9,6 +9,7 @@ var gulp = require('gulp'),
 gulp.task('browser-sync', function() {
   var files = [
     './style.css',
+    'index.html',
   ];
 
   // initialize that Browser
