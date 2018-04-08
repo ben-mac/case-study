@@ -11,8 +11,42 @@ body {
   padding: 0;
   background-color: $black;
   color: $white;
+  font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+  font-size: 48px;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.facet-logo {
+  max-height: 55px;
+  vertical-align: middle;
+}
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  z-index: 10;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+  }
+}
 ////
 // Utils
 ////
@@ -29,19 +63,43 @@ body {
   height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
 }
 
 .hero__inner {
-  background-image: url('../images/poly-shape-pink.png');
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  margin-top: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/poly-shape-pink.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1000px;
+    height: 1000px;
+    top: -120px;
+    z-index: -1;
+  }
 }
 
-.copy {
-  width: 80%;
+.title {
+  width: 45%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.arrow-down {
+  background-image: url('../images/arrow-down.svg');
+  width: 36px;
+  height: 18px;
+  display: block;
   margin: auto;
 }
