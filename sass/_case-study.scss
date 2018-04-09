@@ -13,12 +13,14 @@ body {
   background-image: url('../images/body-bg.png');
   color: $white;
   font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: 48px;
   letter-spacing: -0.6px;
   text-transform: uppercase;
+  margin-top: 0;
 }
 
 h2 {
@@ -177,12 +179,13 @@ a {
       padding-left: 0;
       right: -15vw;
       padding-right: 15vw;
+      transform: translateX(50%);
     }
   }
 }
 
 .summary-content {
-  width: 50%;
+  width: 65%;
   
   p {
     font-weight: 300;
@@ -195,7 +198,7 @@ a {
     float: left;
     font-size: 120px;
     line-height: 80px;
-    padding: 0 15px 30px;
+    padding: 0 15px 5px 0;
   }
 }
 
@@ -222,16 +225,16 @@ a {
 ////
 .intro {
   position: relative;
-  &::after {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    right: 0;
-    background-image: url('../images/poly-shape-bg2.svg');
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: '';
+  //   bottom: 0;
+  //   right: 0;
+  //   background-image: url('../images/poly-shape-bg2.svg');
+  //   background-repeat: no-repeat;
+  //   width: 200px;
+  //   height: 200px;
+  // }
 }
 
 ////
@@ -240,10 +243,6 @@ a {
 .blockquote {
   position: relative;
   width: 50%;
-  margin: 0;
-  background-image: url('../images/poly-shape-bg1.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
 
   &__title {
     font-size: 42px;
@@ -277,6 +276,53 @@ a {
 ////
 // Solutions
 ////
+.bg {
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 600px;
+  z-index: -1;
+  top: 50%;
+  background-size: contain;
+  transform: rotate(-35deg);
+
+  &--purple {
+    background-image: url('../images/poly-shape-purple.svg');
+  }
+
+  &--transparent {
+    background-image: url('../images/poly-shape-transparent.svg');
+  }
+
+  &--left {
+    transform: translateX(-100%);
+    //left: -50%;
+  }
+
+  &--right {
+    transform: translateX(150%);
+    //right: -50%;
+  }
+
+  &--top {
+    top: 25%;
+  }
+
+  &--mid {
+    top: 50%;
+  }
+
+  &--bottom {
+    top: auto;
+    bottom: 0;
+  }
+
+  &--small {
+    height: 400px;
+    width: 400px;
+  }
+}
 
 .solution {
   width: 80%;
@@ -284,6 +330,7 @@ a {
 
   &--wrapper {
     flex-direction: column;
+    position: relative;
 
     .summary-content {
       height: 400px;
@@ -307,6 +354,11 @@ a {
     letter-spacing: 0.5px;
     font-weight: 300;
   }
+
+  &--container {
+    //position: relative;
+    overflow: hidden;
+  }
 }
 
 ////
@@ -314,6 +366,7 @@ a {
 ////
 .results {
   justify-content: center;
+
   &--number {
     font-size: 72px;
     margin: 0;
@@ -350,3 +403,12 @@ a {
   background-position: bottom center;
 }
 
+
+////
+// Responsive
+////
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+}
