@@ -13,6 +13,9 @@ body {
   background-image: url('../images/body-bg.png');
   color: $white;
   font-family: 'Open Sans', sans-serif;
+}
+
+.case-study-wrap {
   overflow-x: hidden;
 }
 
@@ -65,6 +68,11 @@ a {
   font-size: 50px;
   text-align:  center;
   display: inline-block;
+  position: relative;
+
+  &__bg {
+    position: relative;
+  }
 
   &__bg {
     background-image: url('../images/poly-shape-blue.svg');
@@ -132,6 +140,7 @@ a {
     height: 1000px;
     top: 120px;
     z-index: -1;
+    background-position: center center;
   }
 
   &::after {
@@ -170,6 +179,7 @@ a {
 .summary {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &-reverse {
     flex-direction: row-reverse;
@@ -207,17 +217,20 @@ a {
 }
 
 .pill {
-  background: $orange;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: -0.5px;
-  line-height: 16px;
   display: block;
-  width: auto;
   margin-bottom: 10px;
-  border-radius: 15px;
-  padding: 10px;
-  text-transform: uppercase;
+
+  span {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    line-height: 16px;
+    display: inline-block;
+    background: $orange;
+    border-radius: 25px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
 }
 
 ////
@@ -291,6 +304,14 @@ a {
     background-image: url('../images/poly-shape-purple.svg');
   }
 
+  &--blue {
+    background-image: url('../images/poly-shape-blue.svg');
+  }
+
+  &--yellow {
+    background-image: url('../images/poly-shape-yello.svg');
+  }
+
   &--transparent {
     background-image: url('../images/poly-shape-transparent.svg');
   }
@@ -301,7 +322,7 @@ a {
   }
 
   &--right {
-    transform: translateX(150%);
+    transform: translateX(160%);
     //right: -50%;
   }
 
@@ -321,6 +342,10 @@ a {
   &--small {
     height: 400px;
     width: 400px;
+  }
+
+  &--center {
+    top: -50%;
   }
 }
 
@@ -403,7 +428,6 @@ a {
   background-position: bottom center;
 }
 
-
 ////
 // Responsive
 ////
@@ -411,4 +435,14 @@ a {
 .container {
   width: 100%;
   max-width: 1100px;
+}
+
+@media screen and (max-width: 800px) {
+  .hero__inner::before {
+    width: 100%;
+  }
+
+  .title {
+    width: 75%;
+  }
 }
