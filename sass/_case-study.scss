@@ -45,6 +45,13 @@ body {
 
 a {
   color: $blue;
+  transition: all 0.3s ease-in-out;
+  text-decoration-style: dotted;
+
+  &:hover {
+    color: lighten( $blue, 10% );
+    text-decoration-style: solid;
+  }
 }
 
 .block-title {
@@ -70,8 +77,8 @@ a {
     display: flex;
     align-items: center;
     position: relative;
-    transform: translateX(-100px);
-    justify-content: flex-end;
+    transform: translate(-100px, -20%);
+    justify-content: flex-start;
   }
 
   &--orange {
@@ -187,8 +194,16 @@ a {
     flex-direction: row-reverse;
 
     .block-title__bg {
-      transform: translateX(200px);
+      transform: translate(200px, -200px);
       justify-content: flex-start;
+      width: 1000px;
+      height: 1000px;
+      background-size: cover;
+
+      .block-title {
+        margin-left: 100px;
+        margin-top: -100px;
+      }
     }
   }
 }
@@ -199,6 +214,8 @@ a {
   p {
     font-weight: 300;
     font-size: 20px;
+    line-height: 38px;
+    margin-bottom: 50px;
   }
 
   p:first-of-type::first-letter {
@@ -237,6 +254,12 @@ a {
 ////
 .intro {
   position: relative;
+
+  h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
 }
 
 ////
@@ -417,8 +440,8 @@ a {
 // Closing
 ////
 .closing {
-  height: 200px;
-  background-image: url('../images/poly-shape-pink2.svg');
+  height: 310px;
+  background-image: url('../images/poly-shape-pink2.png');
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
