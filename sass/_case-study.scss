@@ -487,8 +487,11 @@ a {
   .summary-reverse {
     .block-title__bg {
       transform: translateX(30%);
+      height: 550px;
+      width: 500px;
     }
   }
+  
 
   .bg {
     &--right {
@@ -507,6 +510,10 @@ a {
   }
   .results__content {
     padding-left: 40px;
+  }
+
+  .closing {
+    height: 220px;
   }
 }
 
@@ -546,6 +553,9 @@ a {
     .block-title__bg {
       transform: translateX(0);
       justify-content: center;
+      height: 400px;
+      background-size: contain;
+      width: auto;
     }
   }
 
