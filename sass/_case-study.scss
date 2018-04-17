@@ -70,7 +70,6 @@ a {
   }
 
   &__bg {
-    background-image: url('../images/poly-shape-blue.svg');
     background-repeat: no-repeat;
     background-size: contain;
     height: 800px;
@@ -81,15 +80,19 @@ a {
     justify-content: flex-start;
   }
 
+  &--blue {
+    background-image: url('../images/poly-shape-blue.svg');
+  }
+
   &--orange {
     background-image: url('../images/poly-shape-yellow.svg');
     height: 800px;
-    //background-size: cover;
   }
 
   &--purple {
     background-image: url('../images/poly-shape-purple.svg');
-    //transform: translate(-80%, -10%);
+    justify-content: flex-end;
+    transform: translate(-200px, -20%);
   }
 }
 
@@ -407,7 +410,7 @@ a {
   }
 
   .summary--content {
-    width: 55%;
+    width: 50%;
   }
 
   &__number {
@@ -452,7 +455,7 @@ a {
 ////
 
 // Tablet
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .container {
     margin: 50px auto;
     padding: 0 30px;
@@ -484,6 +487,14 @@ a {
     justify-content: center;
   }
 
+  .block-title--purple {
+    justify-content: flex-end;
+  }
+
+  .block-title--blue {
+    justify-content: center;
+  }
+
   .summary-reverse {
     .block-title__bg {
       transform: translateX(30%);
@@ -492,7 +503,6 @@ a {
     }
   }
   
-
   .bg {
     &--right {
       transform: translateX(100%);
@@ -567,6 +577,10 @@ a {
     height: 400px;
     transform: translateX(0);
   }
+  
+  .block-title--purple {
+    justify-content: center;
+  }
 
   .blockquote {
     width: 80%;
@@ -588,5 +602,21 @@ a {
 
   .results__number {
     font-size: 55px;
+  }
+}
+
+////
+// Misc screen size fixes
+////
+
+@media screen and (min-width: 901px) and (max-width: 1279px) {
+  .block-title--blue {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  .container {
+    max-width: 1400px;
   }
 }
